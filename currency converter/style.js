@@ -5,8 +5,8 @@ let linput = document.getElementById('linput');
 let leftp=document.getElementById("sol")
 let rightp=document.getElementById("sag")
    
-let sol;   
-let sag;   
+let sol = "RUB";   
+let sag = "USD";   
    
 linput.addEventListener('keyup', function(){         
     getvalue()   
@@ -49,24 +49,30 @@ const getvalue = async () => {
         rightp.innerText = '1 RUB = ' + 1/out + ' RUB'
     
     }   
-    if ((sol == 'RUB') && (sag == 'EUR')) {   
+    else if ((sol == 'RUB') && (sag == 'EUR')) {   
         rinput.value = linput.value * out 
         leftp.innerText = '1 RUB = ' + out + ' EUR'
         rightp.innerText = '1 EUR = ' + 1/out + ' RUB'
         opposite()
     }   
-    if ((sol == 'RUB') && (sag == 'USD')) {  
+    else if ((sol == 'RUB') && (sag == 'USD')) {  
         rinput.value = linput.value * out; 
         leftp.innerText = '1 RUB = ' +out + ' USD'
         rightp.innerText = '1 USD = ' + 1/out + ' RUB'
         opposite()
     }   
-    if ((sol == 'RUB') && (sag == 'AZN')) {   
+    else if ((sol == 'RUB') && (sag == 'AZN')) {   
         rinput.value = linput.value * out  
         leftp.innerText = '1 RUB = ' +out + ' AZN'
         rightp.innerText = '1 AZN = ' + 1/out + ' RUB'
         opposite() 
-    }   
+    }
+    else if ((sol == 'RUB') && (sag == 'TRY')) {   
+        rinput.value = linput.value * out  
+        leftp.innerText = '1 RUB = ' +out + ' TRY'
+        rightp.innerText = '1 TRY = ' + 1/out + ' RUB'
+        opposite() 
+    }      
     else if ((sol == 'USD') && (sag == 'USD')) {   
         rinput.value = linput.value   
         leftp.innerText = '1 USD = ' +out + ' USD'
@@ -89,11 +95,18 @@ const getvalue = async () => {
         leftp.innerText = '1 USD = ' +out + ' AZN'
         rightp.innerText = '1 AZN = ' + 1/out + ' USD' 
         opposite()  
+    }
+    else if ((sol == 'USD') && (sag == 'TRY')) {   
+        rinput.value = linput.value * out 
+        leftp.innerText = '1 USD = ' +out + ' TRY'
+        rightp.innerText = '1 TRY = ' + 1/out + ' USD' 
+        opposite() 
     }   
-    else if ((sol == ' EUR') && (sag == 'EUR')) {   
-        rinput.value = linput.value   
-        leftp.innerText = '1 EUR = ' + out + ' EUR'
-        rightp.innerText = '1 EUR = ' + 1/out + ' EUR'
+    else if ((sol == 'EUR') && (sag == 'EUR')) {  
+        rinput.value = linput.value * out
+        leftp.innerText = '1 EUR = ' +out + ' EUR'
+        rightp.innerText = '1 EUR = ' + 1/out + ' EUR' 
+        opposite()  
     }   
     else if ((sol == 'EUR') && (sag == 'USD')) {   
         rinput.value = linput.value * out
@@ -111,6 +124,12 @@ const getvalue = async () => {
         rinput.value = linput.value * out 
         leftp.innerText = '1 EUR = ' +out + ' AZN'
         rightp.innerText = '1 AZN = ' + 1/out + ' EUR'  
+        opposite()
+    }
+    else if ((sol == 'EUR') && (sag == 'TRY')) {   
+        rinput.value = linput.value * out  
+        leftp.innerText = '1 EUR = ' +out + ' TRY'
+        rightp.innerText = '1 TRY = ' + 1/out + ' EUR' 
         opposite()
     }   
     else if ((sol == 'AZN') && (sag == 'AZN')) {   
@@ -135,6 +154,42 @@ const getvalue = async () => {
         rinput.value = linput.value * out   
         leftp.innerText = '1 AZN = ' +out + ' USD'
         rightp.innerText = '1 USD = ' + 1/out + ' AZN'
+        opposite()
+    }
+    else if ((sol == 'AZN') && (sag == 'TRY')) {   
+        rinput.value = linput.value * out;  
+        leftp.innerText = '1 AZN = ' +out + ' TRY'
+        rightp.innerText = '1 TRY = ' + 1/out + ' AZN' 
+        opposite()
+    }
+    else if ((sol == 'TRY') && (sag == 'TRY')) {   
+        rinput.value = linput.value * out;  
+        leftp.innerText = '1 TRY = ' +out + ' TRY'
+        rightp.innerText = '1 TRY = ' + 1/out + ' TRY' 
+        opposite()
+    }
+    else if ((sol == 'TRY') && (sag == 'RUB')) {   
+        rinput.value = linput.value * out;  
+        leftp.innerText = '1 TRY = ' +out + ' RUB'
+        rightp.innerText = '1 RUB = ' + 1/out + ' TRY' 
+        opposite()
+    }
+    else if ((sol == 'TRY') && (sag == 'USD')) {   
+        rinput.value = linput.value * out;  
+        leftp.innerText = '1 TRY = ' +out + ' USD'
+        rightp.innerText = '1 USD = ' + 1/out + ' TRY' 
+        opposite()
+    }
+    else if ((sol == 'TRY') && (sag == 'EUR')) {   
+        rinput.value = linput.value * out;  
+        leftp.innerText = '1 TRY = ' +out + ' EUR'
+        rightp.innerText = '1 EUR = ' + 1/out + ' TRY' 
+        opposite()
+    }
+    else if ((sol == 'TRY') && (sag == 'AZN')) {   
+        rinput.value = linput.value * out;  
+        leftp.innerText = '1 TRY = ' +out + ' AZN'
+        rightp.innerText = '1 AZN = ' + 1/out + ' TRY' 
         opposite()
     }   
 }   

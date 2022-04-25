@@ -3,20 +3,13 @@ nav{
     flex-direction:row; 
     justify-content: space-around; 
     font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 14px;
-display: flex;
-align-items: center;
-text-align: center;
-
-color: #C6C6C6;
+    color: #C6C6C6;
 } 
 ul{ 
     display: flex; 
     gap: 5%; 
     margin-right: 15%; 
+    margin-left: 5%;
 } 
 li{ 
     list-style: none; 
@@ -37,11 +30,11 @@ img{
 } 
 h1{ 
     padding-top: 3%; 
-    margin-left: 20%; 
+    margin-left: 15%; 
 } 
 .main{ 
     display: flex; 
-    margin-left: 20%; 
+    margin-left: 15%; 
     gap: 10%; 
 } 
 .mainp{ 
@@ -66,7 +59,7 @@ h1{
     margin-top: 3%; 
 } 
 input{ 
-    width: 320px; 
+    width: 380px; 
     height: 150px; 
     margin-top: 7%; 
     font-size: 40px; 
@@ -75,7 +68,7 @@ input{
     border: none;
 } 
 .input{
-    width: 340px;
+    width: 430px;
     border: solid 1px #C6C6C6;
     margin-top: 7%;
 }
@@ -91,4 +84,37 @@ font-weight: 400;
 font-size: 12px;
 line-height: 14px;
 color: #C6C6C6;
+}
+
+
+@media screen and (max-width: 1170px) {
+    ul{
+        display: none;
+    }
+    h1{
+        margin-left: 10%;
+    }
+    .main{
+        margin-left: 10%;
+        display: block;
+        
+    }
+    input{
+        height: 120px;
+        width: 90%;
+    }
+    .input{
+        width: 80%;
+    }
+    span{
+        width:100% !important;
+    }
+    .leftside{
+        width: 80%;
+        margin-right: 4%;
+    }
+    .rightside{
+        width: 80%;
+        margin-right: 4%;
+    }
 }
