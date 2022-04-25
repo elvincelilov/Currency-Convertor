@@ -59,7 +59,7 @@ h1{
     margin-top: 3%; 
 } 
 input{ 
-    width: 380px; 
+    width: 320px; 
     height: 150px; 
     margin-top: 7%; 
     font-size: 40px; 
@@ -68,7 +68,7 @@ input{
     border: none;
 } 
 .input{
-    width: 430px;
+    width: 342px;
     border: solid 1px #C6C6C6;
     margin-top: 7%;
 }
@@ -87,7 +87,7 @@ color: #C6C6C6;
 }
 
 
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 960px) {
     ul{
         display: none;
     }
